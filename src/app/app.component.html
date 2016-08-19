@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<ul>
+  <li *ngFor="let item of list" [ngClass]="{ 'v': item.v }" >
+    <img src="shai.jpg" alt="" width="100%"/>
+  </li>
+</ul>

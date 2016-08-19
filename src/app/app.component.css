@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  border: 3px solid gray;
+  margin: 2px;
+  overflow: hidden;
+}
+
+li img {
+  visibility: hidden;
+  transform: scale(3) translate(2px,22px);
+}
+
+li.v img {
+  visibility: visible;
+}
