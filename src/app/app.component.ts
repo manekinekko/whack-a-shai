@@ -1,6 +1,5 @@
-import { Component, OnInit, Inject, ViewChild } from '@angular/core';
-import { AvatarComponent } from './avatar';
-import { PlayerComponent } from './player';
+import { Component, OnInit, Inject } from '@angular/core';
+import { FxService } from './shared';
 
 @Component({
   moduleId: module.id,
@@ -9,8 +8,6 @@ import { PlayerComponent } from './player';
   styleUrls: ['app.component.css']
 })
 export class AppComponent implements OnInit {
-
-  @ViewChild(PlayerComponent) _player;
 
   list = [];
   counter = 0;
@@ -24,7 +21,8 @@ export class AppComponent implements OnInit {
   constructor(
     @Inject('CELLS') private _cells,
     @Inject('INTERVAL') private _interval,
-    @Inject('TIMER') private _timer
+    @Inject('TIMER') private _timer,
+    @Inject('FxService') private _fx
   ) {
     this.list = this._cells.map( () => {
       return { v: 's1' };
@@ -54,7 +52,7 @@ export class AppComponent implements OnInit {
     if(item.v !== 's2') {
       item.v = 's2';
       this.counter++;
-      this._player.flip();
+      this._fx.flip();
 
       this._flipAnimation = window.setTimeout( () => {
         item.v = 's1';
@@ -73,7 +71,7 @@ export class AppComponent implements OnInit {
 
   click(item) {
     if (item.v === 's2') {
-      this._player.hit();
+      this._fx.hit();
       this.score++;
       item.v = 's1';
       window.clearTimeout(this._flipAnimation);
@@ -81,7 +79,7 @@ export class AppComponent implements OnInit {
     }
     else {
       this._missed = true;
-      this._player.miss();
+      this._fx.miss();
     }
   }
 
@@ -89,7 +87,7 @@ export class AppComponent implements OnInit {
     if(index === 4) {
       this._easter++;
       if(this._easter === 7) {
-        this._player.easter();
+        this._fx.easter();
       }
     }
     else {
