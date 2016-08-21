@@ -4,16 +4,22 @@
   <meta charset="utf-8">
   <title>WhackAShai</title>
   <base href="/">
+  <link rel="manifest" href="/manifest.json">
 
   {{#unless environment.production}}
   <script src="/ember-cli-live-reload.js" type="text/javascript"></script>
   {{/unless}}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <app-root>Loading...</app-root>
-  
+  <app-root>
+    <h3>Loading...</h3>
+    <img src="oh-no-panic.gif" class="loader" alt="" />
+    <h3>Don't panic...</h3>
+  </app-root>
+
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
     {{/each}}
@@ -22,6 +28,6 @@
         System.import('main');
       }).catch(console.error.bind(console));
     </script>
-  
+
 </body>
 </html>

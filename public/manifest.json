@@ -1,0 +1,20 @@
+{
+  "short_name": "Whack-A-Shai",
+  "name": "Whack-A-Shai",
+  "icons": [{
+    "src": "shai.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "shai.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "shai.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
+  "start_url": "/index.html?installed",
+  "display": "standalone",
+  "orientation": "portrait"
+}
