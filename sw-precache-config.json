@@ -1,0 +1,17 @@
+{
+  "swFile": "dist/sw.js",
+  "staticFileGlobs": [
+    "dist/manifest.json",
+    "dist/**/*.css",
+    "dist/**/*.{ttf,woff,woff2,eof}",
+    "dist/**/*.js",
+    "dist/**/*.html",
+    "dist/**/*.{png,jpg,gif,svg,mp3,wav}"
+  ],
+  "handleFetch": true,
+  "stripPrefix": "dist/",
+  "cacheId": "whack-a-shai-v1",
+  "maximumFileSizeToCacheInBytes": 4194304,
+  "ignoreUrlParametersMatching": "[/./]",
+  "verbose": true
+}
