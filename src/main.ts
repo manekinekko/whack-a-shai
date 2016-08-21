@@ -20,4 +20,4 @@ let delayed = () => {
 }
 
 
-window.setTimeout( delayed, 1500);
+window.setTimeout( delayed, 100);
