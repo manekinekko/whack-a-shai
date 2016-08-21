@@ -7,8 +7,11 @@
 
 Because Frosty needed a game (https://twitter.com/js_dev/status/766730782270328832)
 
+# Better experience
 
-### Disclaimer
+In order to enjoy this game, I advice you to [add this app to your homescreen](https://www.google.fr/search?q=add+to+home+screen) to enable more features (this is required on iOS).
+
+## Disclaimer
 
 All materials and assets used is this game belong to their authors:
 - images,
