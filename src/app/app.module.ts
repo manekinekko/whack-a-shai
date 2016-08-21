@@ -13,7 +13,7 @@ import { PlayerComponent }  from './player';
     provide('CELLS',    {useValue: Array(9).fill(0) }),
     provide('INTERVAL', {useValue: 1000 }),
     provide('TIMER',    {useValue: 1200 }),
-    provide( (<any>window).AudioContext, {
+    provide('AudioContext', {
       useFactory: () => {
         return new ((<any>window).AudioContext || (<any>window).webkitAudioContext)();
       }

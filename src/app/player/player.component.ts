@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -14,9 +14,15 @@ export class PlayerComponent implements OnInit {
   _audioES;
   _audioBG;
 
+  // private _audioContext: AudioContext
+  // is not working on ios 9.3.4
+
   constructor(
-    private _audioContext: AudioContext
+    @Inject('AudioContext') private _audioContext
   ) {
+
+    console.log(this._audioContext);
+
     let context = this._audioContext;
 
     let source1 = this._initializeFX1([context, 0.3,'audio/fx1.mp3',0,0,0]);
