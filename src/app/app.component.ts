@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import { AvatarComponent } from './avatar';
 import { PlayerComponent } from './player';
 
@@ -6,9 +6,7 @@ import { PlayerComponent } from './player';
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css'],
-  directives: [AvatarComponent, PlayerComponent],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['app.component.css']
 })
 export class AppComponent implements OnInit {
 
